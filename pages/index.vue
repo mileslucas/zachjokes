@@ -1,35 +1,34 @@
 <template>
   <section class="container">
     <div>
-      <app-logo/>
-      <h1 class="title">
-        zachjokes
-      </h1>
-      <h2 class="subtitle">
-        What's a Zach joke? Ask Zach.
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green">Documentation</a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey">GitHub</a>
-      </div>
+      <app-logo />
+      <h1 class="title">zachjokes</h1>
+      <h2 class="subtitle">{{ joke }}</h2>
     </div>
   </section>
 </template>
 
 <script>
-import AppLogo from '~/components/AppLogo.vue'
+import AppLogo from "~/components/AppLogo.vue";
+import axios from "axios";
 
 export default {
+  data() {
+    return {
+      joke: null
+    };
+  },
   components: {
     AppLogo
+  },
+  mounted() {
+    axios
+      .get("https://icanhazdadjoke.com", {
+        headers: { Accept: "text/plain" }
+      })
+      .then(response => (this.joke = response.data));
   }
-}
+};
 </script>
 
 <style>
@@ -42,7 +41,8 @@ export default {
 }
 
 .title {
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
+  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
   display: block;
   font-weight: 300;
   font-size: 100px;
