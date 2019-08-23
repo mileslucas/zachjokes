@@ -1,33 +1,22 @@
 <template>
   <section class="container">
     <div>
+      <h1 class="title">Zach Jokes</h1>
       <app-logo />
-      <h1 class="title">zachjokes</h1>
-      <h2 class="subtitle">{{ joke }}</h2>
+      <joke />
     </div>
   </section>
 </template>
 
 <script>
 import AppLogo from "~/components/AppLogo.vue";
-import axios from "axios";
+import Joke from "~/components/Joke.vue";
 
 export default {
-  data() {
-    return {
-      joke: null
-    };
-  },
   components: {
-    AppLogo
+    AppLogo,
+    Joke
   },
-  mounted() {
-    axios
-      .get("https://icanhazdadjoke.com", {
-        headers: { Accept: "text/plain" }
-      })
-      .then(response => (this.joke = response.data));
-  }
 };
 </script>
 
@@ -52,10 +41,14 @@ export default {
 
 .subtitle {
   font-weight: 300;
+  max-width: 70%;
   font-size: 42px;
   color: #526488;
   word-spacing: 5px;
   padding-bottom: 15px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .links {
