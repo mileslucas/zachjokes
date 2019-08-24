@@ -3,6 +3,8 @@
     <Title />
     <div class="container-fluid">
       <Joke />
+
+      <p id="click" class="pt-3">Click for more!</p>
     </div>
     <div class="footer fixed-bottom mx-auto">
       <p>
@@ -34,6 +36,16 @@ export default {
 }
 a {
   color: #e4e4e4;
+}
+@media (max-width: 375px) {
+  #click {
+    font-size: 10px;
+  }
+}
+#click {
+  color: #ffffff;
+  text-align: center;
+  font-size: 20px;
 }
 </style>
 
