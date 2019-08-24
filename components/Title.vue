@@ -1,18 +1,31 @@
 <template>
-  <div id="title" class="d-flex justify-content-center m-3 p-1 rounded-lg">
-    <img src="~assets/zach.png" class="img-fluid mr-3" />
+<div id="title" class="m-3 p-1 rounded-lg">
+  <img id="img-sm" src="~assets/zach.png" class="img-fluid">
+  <span  class="d-flex justify-content-center">
+    <img id="img1" src="~assets/zach.png" class="img-fluid mr-3">
     <h1 class="display-3 my-auto">Zach Jokes</h1>
-    <img src="~assets/zach.png" class="img-fluid ml-3" />
-  </div>
+    <img id="img2" src="~assets/zach.png" class="img-fluid ml-3">
+  </span>
+</div>
 </template>
 
 <style scoped>
 img {
     max-width: 8rem;
 }
+#img-sm {
+    display: none;
+    height: 15vh;
+    margin-top: 0.5rem;
+    margin-left: auto;
+    margin-right: auto;
+}
 @media (max-width:375px) {
-    img {
+    #img1, #img2 {
         display: none;
+    }
+    #img-sm {
+        display: block;
     }
     h1 {
         padding-top: 1rem;
