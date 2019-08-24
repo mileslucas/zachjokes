@@ -1,44 +1,37 @@
 <template>
-<div>
-  <header class="d-flex justify-content-center">
-    <h1 class="title">Zach Jokes</h1>
-  </header>
-  <div class="container-fluid">
-    <joke />
+  <div>
+    <Title />
+    <div class="container-fluid">
+      <Joke />
+    </div>
+    <div class="footer fixed-bottom mx-auto">
+      <a href="/about" class="my-1">About</a>
+      <p>Copyright © 2019 <a href="https://mileslucas.com">Miles Lucas</a></p>
+    </div>
   </div>
-  <footer class="fixed-bottom d-flex justify-content-center">
-    Copyright © 2019 Miles Lucas
-  </footer>
-</div>
 </template>
 
 <script>
-import AppLogo from "~/components/AppLogo.vue";
+import Title from "~/components/Title.vue";
 import Joke from "~/components/Joke.vue";
 
 export default {
   components: {
-    AppLogo,
-    Joke
+    Joke,
+    Title
   }
 };
 </script>
 
 <style>
-
-.title {
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
+.footer {
+  margin-bottom: 1rem;
+  color: #ffffffd2;
+  width: 300px;
+  text-align: center;
 }
-
-footer {
-  padding-bottom: 1rem;
+a {
+  color: #e4e4e4;
 }
-
 </style>
 

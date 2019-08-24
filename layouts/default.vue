@@ -15,6 +15,13 @@ html {
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
 }
+body {
+  background: linear-gradient(20deg, #159957, #155799);
+  background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: top center;
+	
+}
 
 *, *:before, *:after {
   box-sizing: border-box;
