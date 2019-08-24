@@ -1,5 +1,5 @@
 <template>
-  <div class="container m-5">
+  <div class="container p-5">
     <h1>About Zach Jokes</h1>
     <p>
       All jokes sourced from

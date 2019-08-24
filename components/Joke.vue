@@ -38,4 +38,9 @@ export default {
   word-spacing: 5px;
   text-align: center;
 }
+@media (max-width:375px) {
+    .joke {
+        font-size:30px;
+    }
+}
 </style>

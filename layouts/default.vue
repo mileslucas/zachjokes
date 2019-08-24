@@ -16,7 +16,7 @@ html {
   box-sizing: border-box;
 }
 body {
-  background: linear-gradient(20deg, #159957, #155799);
+  background: linear-gradient(-22deg, #159957, #155799);
   background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: top center;
