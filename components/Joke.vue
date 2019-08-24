@@ -1,16 +1,13 @@
 <template>
     <div id="joke">
-        <button v-on:click="getJoke">Moar!!</button>
-        <h2 class="subtitle">{{ joke }}</h2>
+        <button class="btn" v-on:click="getJoke">
+        <h2 class="joke">{{ joke }}</h2>
+        </button>
     </div>
 </template>
 
 <script>
 import axios from "axios";
-
-function getJoke() {
-    return ;
-}
 
 export default {
     data () {
@@ -18,7 +15,6 @@ export default {
             joke: null
         }
     },
-
     methods: {
         getJoke: function(event) {
             axios
@@ -33,3 +29,15 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+.joke {
+  font-weight: 300;
+  font-size: 42px;
+  color: #526488;
+  word-spacing: 5px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+</style>

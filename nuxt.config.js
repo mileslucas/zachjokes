@@ -3,7 +3,7 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'zachjokes',
+    title: 'Zach Jokes',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -34,6 +34,6 @@ module.exports = {
         })
       }
     }
-  }
+  },
+  modules: ['bootstrap-vue/nuxt']
 }
-
