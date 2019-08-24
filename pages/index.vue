@@ -5,8 +5,10 @@
       <Joke />
     </div>
     <div class="footer fixed-bottom mx-auto">
-      <a href="/about" class="my-1">About</a>
-      <p>Copyright © 2019 <a href="https://mileslucas.com">Miles Lucas</a></p>
+      <p>
+        <a href="/about" class="my-1">About</a> · Copyright © 2019
+        <a href="https://mileslucas.com">Miles Lucas</a>
+      </p>
     </div>
   </div>
 </template>
